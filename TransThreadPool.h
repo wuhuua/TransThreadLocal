@@ -1,3 +1,6 @@
+#ifndef TRANS_THREAD_POOL_H
+#define TRANS_THREAD_POOL_H
+
 #include <vector>
 #include <queue>
 #include <memory>
@@ -191,3 +194,5 @@ inline TransThreadPool::~TransThreadPool()
     for(std::thread &worker: workers)
         worker.join();
 }
+
+#endif
